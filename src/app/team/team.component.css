@@ -1,0 +1,14 @@
+.champ_slot {
+    width: 100px;
+    height:100px;
+    background: lightgrey;
+    border-radius: 5px;
+    border: 1px solid silver;
+    box-shadow: 0 0 3px rgba(0,0,0,.5);
+    display:inline-block;
+    margin: 5px;
+    padding: 3px;
+    text-align:center;
+    padding-top:10px;
+    vertical-align: top;
+}

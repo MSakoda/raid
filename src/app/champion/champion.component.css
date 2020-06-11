@@ -1,0 +1,20 @@
+.champion {
+    width: 150px;
+    height: 150px;
+    border: 1px solid silver;
+    padding: 5px;
+    margin: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+    background: #eee;
+    display:inline-block;
+    vertical-align: top;
+}
+
+.train {
+    margin-top: 10px;
+}
+
+.selected {
+    border: 1px solid steelblue;
+    box-shadow: 0 0 5px blue;
+}

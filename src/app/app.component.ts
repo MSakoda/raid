@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ChampionService } from './champion.service';
 
 @Component({
   selector: 'app-root',
@@ -8,16 +9,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'raid';
 
-  champions: any = [
-    {
-      name: 'champ 1',
-      exp: 0
-    },
-    {
-      name: 'champ 2',
-      exp: 0
-    },
-  ];
+  constructor(public champ: ChampionService) {
+
+  }
 
   onClickChampion(champion) {
     console.log(`clicked champion`);
@@ -25,12 +19,7 @@ export class AppComponent {
   }
 
   buyChampion() {
-    let newChamp = {
-      name: `champ ${this.champions.length + 1}`,
-      exp: 0
-    }
-
-    this.champions.push(newChamp);
+    this.champ.buyChampion();
   }
 
 }
