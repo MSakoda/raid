@@ -1,0 +1,19 @@
+.champion {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  cursor:pointer;
+  border: 1px solid silver;
+  text-align:center;
+  box-shadow: 0 0 5px rgba(0,0,0,.5);
+  display:inline-block;
+  margin: 0 10px;
+}
+
+.champion .name {
+  margin-top: 10px;
+}
+
+.champion .exp {
+  margin-top: 10px;
+}
