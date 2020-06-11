@@ -7,13 +7,15 @@
     class="btn btn-secondary btn-sm train"
     (click)="train()">Train</div> -->
     <div
-    *ngIf="champion.exp == champion.max_exp"
-    (click)="onClickRankUp()"
+    *ngIf="champion.exp == champion.max_exp && champ.rank_up_main == null"
+    (click)="champ.onClickRankUp(champion)"
     class="btn btn-primary btn-sm">
         Rank up
     </div>
     <div
-    *ngIf="!champ.teamFull && !champ.teamIncludesChamp(champion)"
-    (click)="onSelect()"
+    *ngIf="
+    !champ.teamFull &&
+    !champ.teamIncludesChamp(champion)"
+    (click)="champ.selectChampion(champion)"
      class="btn btn-warning">Select</div>
 </div>

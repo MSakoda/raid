@@ -13,6 +13,7 @@ export class TeamComponent implements OnInit {
   removeChampion(index){
       this.champ.team[index].champion = null;
       this.champ.checkTeamFull();
+      this.champ.updateTeam();
   }
 
   ngOnInit() {

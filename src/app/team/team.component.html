@@ -1,18 +1,21 @@
 <div class="team">
     <h5>Team</h5>
     <div class="champions">
-        <div
-        *ngFor="let champion of champ.team; let i = index"
-        class="champ_slot">
+        <ng-container
+        *ngFor="let champion of champ.team; let i = index">
+            <div
+            [class.champ_selected]="champion.champion"
+            class="champ_slot">
             <ng-container
             *ngIf="champion.champion">
-                <h5 >{{champion.champion.name}}</h5>
-                <div
-                (click)="removeChampion(i)"
-                class="btn btn-sm btn-cancel">Remove</div>
-            </ng-container>
+            <h5 >{{champion.champion.name}}</h5>
+            <div
+            (click)="removeChampion(i)"
+            class="btn btn-sm btn-danger">Remove</div>
+        </ng-container>
 
-            <p *ngIf="champion.champion == null">Select Champion</p>
-        </div>
+        <p *ngIf="champion.champion == null">Select Champion</p>
+    </div>
+        </ng-container>
     </div>
 </div>

@@ -2,9 +2,16 @@
   <h1>Raid</h1>
 
 
-    <team></team>
+    <div
+    *ngIf="!champ.checkTeamEmpty() && champ.rank_up_main == null"
+    (click)="champ.onBattle()"
+    class="btn btn-primary">BATTLE</div>
 
-    <champion *ngFor="let champion of champ.champions" [champion]="champion"></champion>
+    <team *ngIf="champ.rank_up_main == null"></team>
+
+    <champion
+    *ngFor="let champion of champ.champions"
+    [champion]="champion"></champion>
 
     <rank-up *ngIf="champ.rank_up_main"></rank-up>
 

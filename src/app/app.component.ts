@@ -22,4 +22,8 @@ export class AppComponent {
     this.champ.buyChampion();
   }
 
+  onBattle() {
+      console.log(`clicked battle`);
+  }
+
 }

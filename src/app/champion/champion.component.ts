@@ -20,13 +20,4 @@ export class ChampionComponent implements OnInit {
       }
   }
 
-  onSelect() {
-      this.champ.selectChampion(this.champion);
-  }
-
-  onClickRankUp() {
-      console.log(`clicked rank up`);
-      this.champ.rank_up_main = this.champion;
-  }
-
 }
