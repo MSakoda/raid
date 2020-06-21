@@ -1,0 +1,16 @@
+<div class="shop">
+  <h4 class="mt-5">Shop</h4>
+  <h5>Silver: {{player.player.silver}}</h5>
+
+  <div class="items">
+    <div
+      *ngFor="let item of shop_items"
+      class="item">
+      <p class='d-inline'>{{ item.name }} </p>
+      <div
+      (click)="buyItem(item)"
+      class="btn btn-warning btn-sm"
+      style="float:right;">S: {{ item.price }}</div>
+    </div>
+  </div>
+</div>

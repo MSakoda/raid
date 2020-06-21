@@ -8,7 +8,7 @@
             class="champ_slot">
             <ng-container
             *ngIf="champion.champion">
-            <h5 >{{champion.champion.name}}</h5>
+            <p>{{champion.champion.name}} ({{champion.champion.rank}}/6)</p>
             <div
             (click)="removeChampion(i)"
             class="btn btn-sm btn-danger">Remove</div>

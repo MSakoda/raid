@@ -1,24 +1,21 @@
 <div class="container">
   <h1>Raid</h1>
+  <div
+  (click)="resetLocalStorage()"
+  class="btn btn-danger"
+  style="float:right;margin-left:20px;">Reset localStorage</div>
 
-
-    <div
-    *ngIf="!champ.checkTeamEmpty() && champ.rank_up_main == null"
-    (click)="champ.onBattle()"
-    class="btn btn-primary">BATTLE</div>
+    <div *ngIf="!champ.teamEmpty">
+      <battle></battle>
+      <battle-log></battle-log>
+    </div>
 
     <team *ngIf="champ.rank_up_main == null"></team>
 
-    <champion
-    *ngFor="let champion of champ.champions"
-    [champion]="champion"></champion>
+    <champions></champions>
 
     <rank-up *ngIf="champ.rank_up_main"></rank-up>
 
-  <div class="shop">
-    <h4 class="mt-5">Shop</h4>
-    <div class="shop_item btn btn-primary mt-5" (click)="buyChampion()">
-      Buy Champion
-    </div>
-  </div>
+    <shop></shop>
+
 </div>

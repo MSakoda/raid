@@ -1,0 +1,13 @@
+.item {
+  width: 200px;
+  height:60px;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  background: steelblue;
+  border-radius: 5px;
+  border: 1px solid darkblue;
+  box-shadow: 0 0 3px rgba(0,0,0,.5);
+  display:inline-block;
+  margin: 5px;
+}

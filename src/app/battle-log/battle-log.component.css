@@ -1,0 +1,12 @@
+.logs {
+  border: 1px solid silver;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,.5);
+  height:100px;
+  overflow-y: scroll;
+}
+
+.log {
+  margin: 2px;
+  padding: 0;
+}

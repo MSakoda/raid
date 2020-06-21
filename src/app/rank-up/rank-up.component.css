@@ -1,0 +1,20 @@
+.champions {
+  border: 1px solid silver;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,.5);
+}
+
+.champions .champion {
+  width: 100px;
+  height: 100px;
+  border: 1px solid silver;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+}
+
+.rank_up_options {
+  margin: 10px;
+}

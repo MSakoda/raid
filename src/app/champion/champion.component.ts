@@ -14,10 +14,10 @@ export class ChampionComponent implements OnInit {
   ngOnInit() {
   }
 
-  train(){
-      if (this.champion.exp < this.champion.max_exp) {
-          this.champion.exp += 1;
-      }
+  onMaxLevel(){
+    this.champion.level = this.champion.max_level;
+    this.champion.exp = 0;
+    this.champ.updateChampions();
   }
 
 }

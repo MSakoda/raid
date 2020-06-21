@@ -1,0 +1,16 @@
+<div
+*ngIf="!champ.checkTeamEmpty() && champ.rank_up_main == null"
+(click)="champ.onBattle()"
+class="btn btn-primary">BATTLE</div>
+
+<h3>Battle</h3>
+<h5>Level asdf</h5>
+<div class="levels">
+  <div *ngFor="let level of levels" class="level">
+    <div
+    (click)="onClickLevel(level)"
+    class="btn btn-primary">
+      {{level.name}}
+    </div>
+  </div>
+</div>

@@ -1,13 +1,17 @@
 <div class="champion" [class.selected]="champ.rank_up_main == champion">
     <div class="name"> {{ champion.name }}</div>
     <div class="rank">Rank: {{ champion.rank }}</div>
-    <div class="exp">Exp:{{ champion.exp }}/{{champion.max_exp}}</div>
+    <div class="level">Level: {{ champion.level }}</div>
+    <div class="exp">Exp: {{ champion.level == champion.max_level ? 'MAX' : champion.exp + '/' + champion.max_exp}}</div>
     <!-- <div
     *ngIf="champion.exp < champion.max_exp"
     class="btn btn-secondary btn-sm train"
     (click)="train()">Train</div> -->
     <div
-    *ngIf="champion.exp == champion.max_exp && champ.rank_up_main == null"
+    *ngIf="champion.level != champion.max_level"
+    (click)="onMaxLevel()" class="btn btn-warning m-1">Max Level</div>
+    <div
+    *ngIf="champion.level == champion.max_level && champ.rank_up_main == null"
     (click)="champ.onClickRankUp(champion)"
     class="btn btn-primary btn-sm">
         Rank up
@@ -17,5 +21,5 @@
     !champ.teamFull &&
     !champ.teamIncludesChamp(champion)"
     (click)="champ.selectChampion(champion)"
-     class="btn btn-warning">Select</div>
+     class="btn btn-warning btn-sm ml-1">Select</div>
 </div>

@@ -1,5 +1,30 @@
 <div class="rank-up">
     <h4>Rank up champion: {{ champ.rank_up_main.name}}</h4>
+    <p>You must select an equal amount of champions with the same rank to merge as this champion's rank.</p>
+
+    <div class="champions" *ngFor="let champion of champions">
+      <div class="champion">
+        {{champion == null ? 'Select Champion' : champion.name}}
+      </div>
+    </div>
+
+    <div class="rank_up_options">
+      <ng-container
+        *ngFor="let champion of champ.champions">
+
+        <div
+        *ngIf="champ.rank_up_main != champion && champ.rank_up_main.rank == champion.rank"
+        (click)="onSelect(champion)"
+        [class.disabled]="champion.used_for_food"
+        class="btn btn-primary">
+        {{champion.name}}
+        </div>
+      </ng-container>
+    </div>
+    <div
+    *ngIf="canMerge"
+    (click)="onMerge()"
+    class="btn btn-success mr-5">MERGE</div>
     <div
     (click)="onCancel()"
     class="btn btn-sm btn-danger">Cancel</div>

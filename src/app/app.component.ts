@@ -18,12 +18,18 @@ export class AppComponent {
     champion.exp += 1;
   }
 
-  buyChampion() {
-    this.champ.buyChampion();
-  }
-
   onBattle() {
       console.log(`clicked battle`);
+  }
+
+  resetLocalStorage() {
+    if (confirm("Are you sure you want to clear localstorage?")) {
+      let items = ['champions','team','player'];
+      items.forEach((i: string) => {
+        delete localStorage[i];
+      });
+      window.location.reload();
+    }
   }
 
 }
