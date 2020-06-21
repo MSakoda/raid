@@ -8,6 +8,7 @@ export class PlayerService {
   player: any = {
     level: 1,
     silver: 100,
+    highest_stage: null
   };
 
   constructor() { }
